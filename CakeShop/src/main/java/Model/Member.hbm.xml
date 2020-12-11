@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="cakeshop" dynamic-insert="false" dynamic-update="false" mutable="true" name="Model.Member" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="member">
+        <id name="memberId" type="java.lang.Integer">
+            <column name="MemberId"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="account" optimistic-lock="true" type="string" unique="false">
+            <column length="40" name="Account"/>
+        </property>
+        <property generated="never" lazy="false" name="password" optimistic-lock="true" type="string" unique="false">
+            <column length="40" name="Password"/>
+        </property>
+        <property generated="never" lazy="false" name="memberName" optimistic-lock="true" type="string" unique="false">
+            <column length="40" name="MemberName"/>
+        </property>
+        <property generated="never" lazy="false" name="gender" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="Gender"/>
+        </property>
+        <property generated="never" lazy="false" name="birthday" optimistic-lock="true" type="string" unique="false">
+            <column length="40" name="Birthday"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="string" unique="false">
+            <column length="40" name="Email"/>
+        </property>
+        <property generated="never" lazy="false" name="address" optimistic-lock="true" type="string" unique="false">
+            <column length="40" name="Address"/>
+        </property>
+        <property generated="never" lazy="false" name="phoneNumber" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="PhoneNumber"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="orderlists" optimistic-lock="true" sort="unsorted" table="orderlist">
+            <key on-delete="noaction">
+                <column name="MemberId"/>
+            </key>
+            <one-to-many class="Model.Orderlist" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

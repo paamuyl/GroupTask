@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-catalog="cakeshop" match-name="member" />
+	<table-filter match-catalog="cakeshop" match-name="orderdetail" />
+	<table-filter match-catalog="cakeshop" match-name="orderlist" />
+	<table-filter match-catalog="cakeshop" match-name="product" />
+	<table-filter match-catalog="cakeshop" match-name="employee" />
+	<table-filter match-name="category" match-catalog="cakeshop"/>
+</hibernate-reverse-engineering>

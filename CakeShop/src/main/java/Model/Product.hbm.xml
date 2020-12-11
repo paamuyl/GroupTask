@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="cakeshop" dynamic-insert="false" dynamic-update="false" mutable="true" name="Model.Product" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="product">
+        <id name="productCode" type="java.lang.Integer">
+            <column name="ProductCode"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="productName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="ProductName"/>
+        </property>
+        <property generated="never" lazy="false" name="description" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="Description"/>
+        </property>
+        <property generated="never" lazy="false" name="price" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="Price"/>
+        </property>
+        <property generated="never" lazy="false" name="categoryId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="CategoryId"/>
+        </property>
+        <property generated="never" lazy="false" name="expireDate" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="ExpireDate"/>
+        </property>
+        <property generated="never" lazy="false" name="unitInStock" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="UnitInStock"/>
+        </property>
+        <property generated="never" lazy="false" name="picUrl" optimistic-lock="true" type="string" unique="false">
+            <column length="80" name="picURL"/>
+        </property>
+        <property generated="never" lazy="false" name="createdDate" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="createdDate"/>
+        </property>
+        
+    </class>
+</hibernate-mapping>

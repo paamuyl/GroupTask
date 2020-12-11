@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="cakeshop" dynamic-insert="false" dynamic-update="false" mutable="true" name="Model.Lessonsignup" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="lessonsignup">
+        <id name="lessonSignUpId" type="java.lang.Integer">
+            <column name="lessonSignUpId"/>
+            <generator class="identity"/>
+        </id>
+		<property generated="never" lazy="false" name="lessonId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="lessonId"/>
+        </property>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="Name"/>
+        </property>
+        <property generated="never" lazy="false" name="phoneNumber" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="phoneNumber"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="email"/>
+        </property>
+        <property generated="never" lazy="false" name="memberId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="MemberId"/>
+        </property>
+        <property generated="never" lazy="false" name="createdDate" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="createdDate"/>
+        </property>
+    </class>
+</hibernate-mapping>

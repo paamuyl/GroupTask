@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="cakeshop" dynamic-insert="false" dynamic-update="false" mutable="true" name="Model.Orderdetail" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="orderdetail">
+        <id name="orderdetailId" type="java.lang.Integer">
+            <column name="orderdetailId"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="orderNumber" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="OrderNumber"/>
+        </property>
+        <property generated="never" lazy="false" name="productCode" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="ProductCode"/>
+        </property>
+        <property generated="never" lazy="false" name="quantity" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="Quantity"/>
+        </property>
+        <property generated="never" lazy="false" name="price" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="Price"/>
+        </property>
+    </class>
+</hibernate-mapping>

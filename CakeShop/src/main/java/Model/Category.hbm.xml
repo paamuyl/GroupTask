@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="cakeshop" dynamic-insert="false" dynamic-update="false" mutable="true" name="Model.Category" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="category">
+        <id name="categoryId" type="java.lang.Integer">
+            <column name="categoryId"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="categoryName" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="categoryName"/>
+        </property>
+    </class>
+</hibernate-mapping>

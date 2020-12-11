@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="cakeshop" dynamic-insert="false" dynamic-update="false" mutable="true" name="Model.Employee" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="employee">
+        <id name="employeeId" type="java.lang.Integer">
+            <column name="EmployeeId"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="employeeName" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="EmployeeName"/>
+        </property>
+        <property generated="never" lazy="false" name="account" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="Account"/>
+        </property>
+        <property generated="never" lazy="false" name="password" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="Password"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="Email"/>
+        </property>
+        <property generated="never" lazy="false" name="createdDate" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="createdDate"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory >
+  <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+  <property name="hibernate.connection.password">1234</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cakeshop?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=CST</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLMyISAMDialect</property>
+  <mapping resource="Model/Member.hbm.xml"/>
+  <mapping resource="Model/Orderdetail.hbm.xml"/>
+  <mapping resource="Model/Orderlist.hbm.xml"/>
+  <mapping resource="Model/Product.hbm.xml"/>
+  <mapping resource="Model/Employee.hbm.xml"/>
+  <mapping resource="Model/Category.hbm.xml"/>
+  <mapping resource="Model/Lesson.hbm.xml"/>
+  <mapping resource="Model/Lessonsignup.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>
